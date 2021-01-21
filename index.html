@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>To Do | TruptiSahu</title>
+
+    <!-- --- CSS StyleSheet ---- -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- --- CSS StyleSheet ---- -->
+    <link
+      rel="stylesheet"
+      href="css/style-web.css"
+      media="screen and (min-width: 1200px)"
+    />
+
+    <!-- CSS FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
+
+    <!-- ----- CSS Favicon ----- -->
+    <link rel="shortcut icon" href="logo.svg" type="image/x-icon" />
+
+    <!-- ----- JavaScript ------ -->
+    <script src="js/script.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <div class="background">
+      <img src="img/bg-mob.png" alt="" class="bgImg__mob" />
+      <img src="img/bg-web.png" alt="" class="bgImg__web" />
+    </div>
+
+    <header>
+      <div class="logo">
+        <img class="logo__img" src="logo.svg" alt="" />
+        <h2 class="logo__text">To-Do</h2>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="todoContainer">
+        <div class="todo__greet">
+          <span>
+            <img src="img/iconSmile.svg" alt="" />
+          </span>
+          <div class="day-container">
+            <h2>
+              Have a nice
+              <p id="day">Thursday</p>
+            </h2>
+            <h2 id="date">Jan 16, 2020</h2>
+          </div>
+          <span>
+            <img src="img/iconHappy.svg" alt="" />
+          </span>
+        </div>
+        <div class="todo__searchContainer">
+          <form action="" class="searchBar">
+            <label for="search">
+              <img src="img/iconWriting.svg" alt="" />
+              <input
+                type="text"
+                name=""
+                id="search"
+                placeholder="Add a to-do"
+                class="searchBar__text"
+                autocomplete="off"
+              />
+              <button type="submit" id="btnAdd">
+                <i class="fas fa-plus"></i>
+              </button>
+            </label>
+          </form>
+
+          <form action="" class="filterSearch">
+            <div class="custom-select-wrapper">
+              <div class="custom-select">
+                <div class="custom-select__trigger">
+                  <span>All</span>
+                  <div class="arrow">
+                    <i class="fas fa-arrow-down"></i>
+                  </div>
+                </div>
+                <div class="custom-options">
+                  <span class="custom-option selected" data-value="all"
+                    >All</span
+                  >
+                  <span class="custom-option" data-value="completed"
+                    >Complete</span
+                  >
+                  <span class="custom-option" data-value="incomplete"
+                    >Incomplete</span
+                  >
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="todo__todoListContainer">
+          <ul class="todo__todoLists"></ul>
+        </div>
+        <div class="todoBtnPrimaryContainer">
+          <button class="todoBtnPrimary">
+            Clear All
+            <img src="img/iconTrash--white.svg" alt="" />
+          </button>
+        </div>
+      </div>
+      <div class="primaryBackground"></div>
+    </div>
+    <div class="shapes">
+      <div class="shape-left">
+        <img src="img/shapeLeft.svg" alt="" />
+      </div>
+      <div class="shape-right">
+        <img src="img/shapeRight.svg" alt="" />
+      </div>
+    </div>
+  </body>
+</html>

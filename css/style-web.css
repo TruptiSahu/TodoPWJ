@@ -1,0 +1,160 @@
+body {
+  /* position: relative; */
+}
+
+header {
+  position: fixed;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  transition: all 0.6s;
+}
+
+header.sticky {
+  top: 0;
+  background: linear-gradient(-90deg, #c643db, #6615b2);
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.shape-left,
+.shape-right {
+  position: fixed;
+  bottom: 0;
+  display: block;
+  height: 500px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  z-index: -1;
+}
+
+.shape-left {
+  left: 0;
+  width: 25%;
+}
+
+.shape-right {
+  right: 0;
+  width: 10%;
+}
+
+.shape-left img,
+.shape-right img {
+  width: 100%;
+}
+
+/* ------------ Header ----------- */
+
+.logo {
+  margin-top: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.background .bgImg__mob {
+  display: none;
+}
+
+.background .bgImg__web {
+  display: block;
+}
+
+.container {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  transform: translateY(40%);
+  position: relative;
+}
+
+.container::before {
+  content: '.............';
+  position: absolute;
+  bottom: 45px;
+  left: 50%;
+  width: 20%;
+  height: 5px;
+  transform: translateX(-50%);
+  color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 15px;
+  font-size: 45px;
+}
+
+.todoContainer {
+  width: 568px;
+}
+
+.todoContainer::before {
+  display: none;
+}
+
+#search {
+  width: 80%;
+}
+
+.filterSearch {
+  margin-left: 10px;
+}
+
+/* ------------ Primary Background ----------- */
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.primaryBackground {
+  width: 50%;
+  height: 500px;
+  display: flex;
+  background: #000;
+
+  background: url(../img/personWithTodo.svg) no-repeat center bottom/contain;
+  z-index: -1;
+}
+
+/* ------------ Custon ScrollBar  ----------- */
+
+.todo__todoListContainer {
+  width: 100%;
+  height: 353px;
+  margin-top: 25px;
+  overflow-y: scroll;
+  background: #3f51b517;
+  border-radius: 5px;
+  position: relative;
+}
+
+.todo__todoListContainer.scroll {
+  padding-right: 10px;
+}
+
+.todo__todoListContainer.scroll::-webkit-scrollbar {
+  width: 5px;
+  margin-left: 2px;
+  display: block;
+}
+
+.todo__todoListContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.todo__todoListContainer.scroll::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+.todo__todoListContainer.scroll::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 10px;
+}
+
+.todo__todoListContainer.scroll::-webkit-scrollbar-thumb:hover {
+  background: #2f3ea0;
+}
