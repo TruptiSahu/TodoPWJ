@@ -135,7 +135,6 @@ const placeCaretAtEnd = function (el) {
 // Page Loading Animation
 window.addEventListener('load', () => {
   const preload = document.querySelector('.loaderWrapper');
-  document.querySelector('body').style.overflow = 'hidden';
 
   setTimeout(() => {
     preload.style.display = 'none';
