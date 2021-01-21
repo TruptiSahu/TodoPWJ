@@ -31,7 +31,7 @@ li {
   margin: auto;
 }
 
-/* ------------ Background ----------- */
+/* -------- Background ------- */
 
 .background {
   /* position: absolute;
@@ -54,7 +54,7 @@ li {
   display: none;
 }
 
-/* ------------ Header ----------- */
+/* -------- Header ------- */
 
 .logo {
   position: absolute;
@@ -90,7 +90,7 @@ li {
   background: var(--primary-color);
 }
 
-/* ------------ To-Do ----------- */
+/* -------- To-Do ------- */
 .todoContainer {
   position: relative;
 }
@@ -149,7 +149,7 @@ li {
   font-weight: 500;
 }
 
-/* ------------ Search Form----------- */
+/* -------- Search Form------- */
 .todo__searchContainer {
   margin-top: 35px;
 }
@@ -215,7 +215,7 @@ li {
   transform: scale(0.96);
 }
 
-/* ------------ Filter Search ----------- */
+/* -------- Filter Search ------- */
 
 .filterSearch {
   width: 100%;
@@ -306,7 +306,7 @@ li {
   transform: rotate(-180deg);
 }
 
-/* ------------ Todo Lists ----------- */
+/* -------- Todo Lists ------- */
 .todo__todoListContainer {
   width: 100%;
   margin-top: 25px;
@@ -497,7 +497,7 @@ li {
   /* pointer-events: auto; */
 }
 
-/* ------------ Todo BTN  ----------- */
+/* -------- Todo BTN  ------- */
 
 .todoBtnPrimaryContainer {
   display: flex;
@@ -537,7 +537,7 @@ li {
   display: none;
 }
 
-/* ------------ Media Queries ----------- */
+/* -------- Media Queries ------- */
 
 @media screen and (min-width: 600px) {
   .todo__searchContainer {
@@ -591,5 +591,81 @@ li {
 
   .background .bgImg__web {
     display: block;
+  }
+}
+
+/* -------------------------------------------------- */
+/*                   PAGE LOADER                      */
+/* -------------------------------------------------- */
+.loaderWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.text {
+  display: inline-block;
+  margin-left: 7px;
+  font-family: 'Poppins', sans-serif;
+  color: transparent;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  background-image: linear-gradient(-45deg, #c643db, #6615b2);
+}
+
+.ball {
+  position: relative;
+  display: inline-block;
+  height: 37px;
+  width: 15px;
+}
+
+.ball::before {
+  position: absolute;
+  content: '';
+  display: block;
+  top: 0;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: linear-gradient(-45deg, #c643db, #6615b2);
+  transform-origin: 50%;
+  animation: bounce 0.6s alternate-reverse 4 ease, grow 1s linear 2.4s;
+}
+
+@keyframes bounce {
+  0% {
+    top: 30px;
+    height: 5px;
+    border-radius: 60px 60px 20px 20px;
+    transform: translate(-50%, -50%) scaleX(2);
+  }
+
+  35% {
+    height: 15px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scaleX(1);
+  }
+
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes grow {
+  to {
+    width: 5000px;
+    height: 5000px;
   }
 }
